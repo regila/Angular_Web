@@ -1,0 +1,25 @@
+<br>
+<h1 style="text-align: center; font-weight: bold;">Books</h1>
+<div style="padding: 20px;">
+    <mat-grid-list cols="4" rowHeight="2:3.5" [gutterSize]="'30px'">
+        <mat-grid-tile *ngFor="let data of displaybooksData.results.books">
+            <div style="text-align: center;">
+                <div>
+                    <img src={{data.book_image}} height="200" width="100" alt="imageAlt">
+                </div>
+                <div style="text-align: left; padding: 20px;">
+                    <span style="font-weight :bold; font-size: 20px;text-align: center;">{{data.title}}<br></span><br>
+                    {{data.description}}<br><br>
+                    <strong>Author: &nbsp;</strong>{{data.author}}<br>
+                    <strong>Publisher: &nbsp;</strong>{{data.publisher}}<br>
+                    <strong>Price: &nbsp;</strong>{{data.price}}<br><br>
+                    <strong>Buy Now: &nbsp;</strong>
+                    <ng-container *ngFor="let buy of data.buy_links ">
+                        <a href="buy.url"><br>{{buy.name}}</a>
+                    </ng-container>
+                </div>
+            </div>
+        </mat-grid-tile>
+        <div></div>
+    </mat-grid-list>
+</div>

@@ -1,0 +1,18 @@
+mat-grid-tile{
+    background-color: lightgray;
+}
+
+img{
+    width:25%;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+
+  .mat-grid-tile .mat-figure {
+    justify-content: flex-start !important ;
+    align-items: flex-start !important;
+ }
+  
